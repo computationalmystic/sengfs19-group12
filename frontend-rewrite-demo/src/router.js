@@ -10,6 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
+      redirect: '/home', 
       name: 'dashboard',
       component: Dashboard, 
       children: [

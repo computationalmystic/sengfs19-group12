@@ -12,7 +12,7 @@
       <option v-for="repo in repos" :key="repo.repo_id" :value="repo.repo_id">{{repo.repo_name}}</option>
     </select>
 
-    <button @click="commitSelectedRepo()">Select Repo</button>
+    <!-- <button @click="commitSelectedRepo()">Select Repo</button> -->
   </div>
 </template>
 
@@ -54,6 +54,7 @@ export default {
     changeRepo(e) {
         console.log(e.target.value);
         this.selectedRepoId = e.target.value;
+        this.commitSelectedRepo();
     }, 
     commitSelectedRepo() {
         console.log('changing selectedRepoOne in vuex store');
