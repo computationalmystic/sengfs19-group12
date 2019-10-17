@@ -12,7 +12,7 @@ export default {
         getContributors() {
             console.log('getting contributors');
             let repo = this.$store.state.selectedRepoOne;
-            fetch(`http://localhost:5000/api/unstable/repo-groups/${repo.groupId}/repos/${repo.repoId}/contributors`)
+            fetch(`http://augur.osshealth.io:5000/api/unstable/repo-groups/${repo.groupId}/repos/${repo.repoId}/contributors`)
                 .then(res => res.json())
                 .then(res => console.log(res));
         }

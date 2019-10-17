@@ -29,7 +29,7 @@ export default {
   },
   mounted() {
     console.log("lets get all the repo groups");
-    fetch("http://localhost:5000/api/unstable/repo-groups")
+    fetch("http://augur.osshealth.io:5000/api/unstable/repo-groups")
       .then(res => res.json())
       .then(res => {
         console.dir(res);
@@ -42,7 +42,7 @@ export default {
     changeRepoGroup(e) {
       console.dir(e.target.value);
       fetch(
-        `http://localhost:5000/api/unstable/repo-groups/${e.target.value}/repos`
+        `http://augur.osshealth.io:5000/api/unstable/repo-groups/${e.target.value}/repos`
       )
         .then(res => res.json())
         .then(res => {
