@@ -8,16 +8,25 @@
 
 ## Sprint 2
 
-**Goals For Sprint 2**
- - Integrate New Firebase Server
- - Connect API Calls (to retrieve the data)
-   
- - Implement at least one call.
-
 **Intended Design**
 
-**Future Goals**
- - Search Usernames for "dog", "cat", or "bird" 
+
+**Goals For Sprint 2**
+- Integrate New Firebase Server
+- Connect API Calls 
+  - To retrieve the data   
+- Implement at least one call/visualisation
+  - Top 10 Commiters
+    - List Of Names
+    - Pie Chart of Number of Commits
+
+
+**Future Design Goals**
+- Implement more calls and visualisations
+  - Search Usernames for "dog", "cat" or "fish" 
+  - List of Repositories and Repository Details
+  - Pulls and Pull rates of success/failures
+
  
 
 
