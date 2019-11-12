@@ -1,7 +1,16 @@
-# Group 12 - Sprint 2
+# AUGUR Metrics Visualisations
+### Group 12 - Full Stack Group
 
-# What We Are Doing for Sprint 2
 
-Our first goal of Sprint 2 is to integrate our new Firebase server and connecting this to our API calls in order to retreive data from the Augur. 
+## Sprint 2
 
-# Intended Design / Additions for Future
+**Goals For Sprint 2**
+ - Integrate New Firebase Server
+ - Connect API Calls (to retrieve the data)
+ - Implement at least one call.
+
+**Intended Design**
+
+**Future Goals**
+
+
