@@ -1,0 +1,24 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="(isHandset$ | async) === false">
+      <mat-toolbar>Menu</mat-toolbar>
+      <mat-nav-list>
+        <a mat-list-item routerLink="/home" routerLinkActive ="active">Home</a>
+        <a mat-list-item routerLink="/repo" routerLinkActive ="active">Repositories</a>
+        <a mat-list-item routerLink="/home" routerLinkActive ="active">Top Commiters</a>
+        <a mat-list-item routerLink="/home" routerLinkActive ="active">Link 3</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="accent">
+        <span>Group 12 Final Project</span>
+      </mat-toolbar>
+      <!-- Add Content Here -->
+      <h1>Welcome to Group 12's Final Project for 4320!</h1>
+      <router-outlet></router-outlet>
+  
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

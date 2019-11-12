@@ -1,0 +1,14 @@
+
+<div class="wrapper">
+    <div id="headBar">
+        <select id="groupList" onchange="repoList(this.selectedIndex-1)">
+            <option disabled selected>Project List</option>
+        </select>
+        <select id="repoList">
+  
+        </select>
+        <input type="text" placeholder="filter repos" onkeypress="filterRepos(this.value)">
+        <input type="button" onclick="selectRepo()" value="Get Repo Metrics">
+    </div>
+    <div id="piechart"></div>
+</div>
