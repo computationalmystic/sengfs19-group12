@@ -11,10 +11,13 @@
 **Goals For Sprint 2**
  - Integrate New Firebase Server
  - Connect API Calls (to retrieve the data)
+   
  - Implement at least one call.
 
 **Intended Design**
 
 **Future Goals**
+ - Search Usernames for "dog", "cat", or "bird" 
+ 
 
 
