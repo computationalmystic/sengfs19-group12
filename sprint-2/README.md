@@ -16,7 +16,7 @@
 - Connect API Calls 
   - To retrieve the data 
   - API Code:
-    - https://github.com/computationalmystic/sengfs19-group12/blob/master/ass2_api_calls
+    - 
 - Implement at least one call/visualisation
   - Top 10 Commiters
     - List Of Names
