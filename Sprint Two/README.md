@@ -10,10 +10,12 @@
 ## Sprint 2
 
 **Intended Design**
-By using Angular Frontend Framework, we intend to implement a single page application where a user can select from a drop down menu to view different calculated metrics of the Augur database. 
+By using Angular Frontend Framework and HTTPClient calls to the Augur API, we implemented a single UI frontend view, including a user friendly navigation bar and visual of top committers within repoitories for the API component. By navigating to "Repository Top Committers" within the menu bar, our API component allows a user to select from a drop down menu with a full list or repositories to view the different calculated metrics of committers for each chosen repository of the Augur database.
+
+In addition, we were able to successfully set up our Firebase server, which is where our database will also be when pulling data from the Augur database and storing it there to be retreived on our UI.
 
 **Goals For Sprint 2**
-- Integrate New Firebase Server
+- Integrate New Firebase Server and Database
 - Connect API Calls to retrieve Data
   - API Calls:
     - https://github.com/computationalmystic/sengfs19-group12/blob/master/api.service.ts
@@ -23,7 +25,7 @@ By using Angular Frontend Framework, we intend to implement a single page applic
 
 - Implement at least one call/visualisation
   - Top 10 Commiters
-    - List Of Names
+    - List Of Names (Emails)
     - Pie Chart Comparing Top Commiters
 
 
