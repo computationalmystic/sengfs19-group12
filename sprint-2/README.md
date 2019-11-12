@@ -1,6 +1,10 @@
 # AUGUR Metrics Visualisations
 ### Group 12 - Full Stack Group
-
+ -Weiyu Feng
+ -Sarah McLaughlin
+ -Christina Roberts
+ -Ziang Xu
+ 
 
 ## Sprint 2
 
