@@ -9,6 +9,12 @@
 
 ## Sprint 2
 
+**Link to Website**
+
+https://cs4320final.firebaseapp.com/repo
+
+Note: be sure you are using chrome, and click load unsecure javascript to make API calls work.
+
 **Intended Design**
 By using Angular Frontend Framework and HTTPClient calls to the Augur API, we implemented a single UI frontend view, including a user friendly navigation bar and visual of top committers within repoitories for the API component. By navigating to "Repository Top Committers" within the menu bar, our API component allows a user to select from a drop down menu with a full list or repositories to view the different calculated metrics of committers for each chosen repository of the Augur database.
 
