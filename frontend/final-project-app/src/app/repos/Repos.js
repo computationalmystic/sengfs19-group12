@@ -61,8 +61,6 @@ function selectRepo(){
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
     getTopCommitters(group.repo_group_id, repo.repo_id);
-    getPullAcceptance(group.repo_group_id, repo.repo_id);
-    getNewIssues(group.repo_group_id, repo.repo_id);
 }
 
 async function fetchData(url){
