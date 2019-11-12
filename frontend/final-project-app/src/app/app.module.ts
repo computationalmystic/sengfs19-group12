@@ -12,12 +12,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ReposComponent } from './repos/repos.component';
+import { HomeComponent } from './home/home.component';
+
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    ReposComponent
+    ReposComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +33,8 @@ import { ReposComponent } from './repos/repos.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,8 +5,8 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/" routerLinkActive ="active">Home</a>
-      <a mat-list-item routerLink="/repos" routerLinkActive ="active">Top Repositories with Commits</a>
+      <a mat-list-item routerLink="/home" routerLinkActive ="active">Home</a>
+      <a mat-list-item routerLink="/repos" routerLinkActive ="active">Repositories</a>
       <a mat-list-item href="#">Top Commiters</a>
       <a mat-list-item href="#">Link 3</a>
     </mat-nav-list>
@@ -24,6 +24,7 @@
       <span>Group 12 Final Project</span>
     </mat-toolbar>
     <!-- Add Content Here -->
+    <h1>Welcome to Group 12's Final Project for 4320!</h1>
     <router-outlet></router-outlet>
 
   </mat-sidenav-content>

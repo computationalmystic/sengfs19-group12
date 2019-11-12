@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ReposComponent } from './repos/repos.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
-  { path: 'repos', component: ReposComponent }
+  { path: 'repos', component: ReposComponent },
+  { path: 'home', component: HomeComponent }
 ];
 
 @NgModule({

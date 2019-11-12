@@ -20,7 +20,7 @@ for(var i=0;i<list.length;i++){
 list.selectedIndex = included[0];
 }    
 
-async function groupList(){
+function groupList(){
     groups = await getGroups();
     let list = document.getElementById("groupList");
     for(let group of groups){
@@ -30,13 +30,13 @@ async function groupList(){
         list.options.add(option);
     }
 }
-async function getGroups(){
+function getGroups(){
     let groupsUrl = base + "/repo-groups/";
     groups = await fetchData(groupsUrl);
     return groups;
 }
 
-async function repoList(groupIndex){
+function repoList(groupIndex){
     let list = document.getElementById("repoList");
     while(list.options.length) list.options.remove(0);
 
@@ -48,7 +48,7 @@ async function repoList(groupIndex){
         list.options.add(option);
     }
 }
-async function getRepos(groupIndex){
+function getRepos(groupIndex){
     let group = groups[groupIndex];
     let reposUrl = base + "/repo-groups/" + group.repo_group_id + "/repos/";
     let repos = await fetchData(reposUrl);
@@ -65,13 +65,13 @@ function selectRepo(){
     getNewIssues(group.repo_group_id, repo.repo_id);
 }
 
-async function fetchData(url){
+function fetchData(url){
     let response =  await fetch(url);
     let json = await response.json();
     return json;
 }
 
-async function getTopCommitters(groupID, repoID){
+function getTopCommitters(groupID, repoID){
     let total = 0;
     let topUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/top-committers?threshold=0.4";
     try{
