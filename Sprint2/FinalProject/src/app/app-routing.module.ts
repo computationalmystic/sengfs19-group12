@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'repo', component: RepoComponent},
   {
     path: '',
-    redirectTo: 'repo',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent} 
