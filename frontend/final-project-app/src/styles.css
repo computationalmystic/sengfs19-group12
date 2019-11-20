@@ -70,3 +70,18 @@ p {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #eceeef;
+}
+
+.home, .home-paragraph {
+    color: #292b2c;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
