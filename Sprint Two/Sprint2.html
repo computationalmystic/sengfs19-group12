@@ -13,11 +13,16 @@
                 <option disabled selected>Project List</option>
             </select>
             <select id="repoList">
-
             </select>
-            <input type="text" placeholder="filter repos" onkeypress="filterRepos(this.value)">
-            <input type="button" onclick="selectRepo()" value="Get Repo Metrics">
+            <input type="button" onclick="selectRepo()" value="Get Information">
         </div>
+        <h><br><br>Evolution - Issues New (Repo)</h>
+        <div id="colGraph"></div>
+        <h>Experimental - Pull Request Acceptance Rate (Repo)</h>
+        <div id="pullGraph"></div>
+        <h>Experimental - Top Committers (Repo)</h>
         <div id="piechart"></div>
+
+
     </body>
 </html>
