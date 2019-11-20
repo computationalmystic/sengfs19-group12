@@ -15,6 +15,7 @@ import { ReposComponent } from './repos/repos.component';
 import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     NavBarComponent,
     ReposComponent,
-    HomeComponent
+    HomeComponent,
+    MeetTheTeamComponent
   ],
   imports: [
     BrowserModule,
