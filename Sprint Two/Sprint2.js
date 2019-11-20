@@ -198,13 +198,7 @@ function drawTopChart(){
     }
     var data = google.visualization.arrayToDataTable(dataElements);
 
-    var options = {
-        chart:{
-            title:'Top Committers',
-        },
-        width:600, 
-        height :400
-    };
+    var options = {'width':600, 'height' :400};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
 }
