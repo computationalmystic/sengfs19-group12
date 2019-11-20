@@ -16,6 +16,9 @@ import { HomeComponent } from './home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PullRateComponent } from './pull-rate/pull-rate.component';
+import { IssuesComponent } from './issues/issues.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { MeetTheTeamComponent } from './meet-the-team/meet-the-team.component';
     NavBarComponent,
     ReposComponent,
     HomeComponent,
-    MeetTheTeamComponent
+    MeetTheTeamComponent,
+    AboutUsComponent,
+    PullRateComponent,
+    IssuesComponent
   ],
   imports: [
     BrowserModule,

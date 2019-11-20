@@ -6,8 +6,10 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/home" routerLinkActive ="active">Home</a>
-      <a mat-list-item href="#">Total Repositories</a>
-      <a mat-list-item routerLink="/repos" routerLinkActive ="active">Repository Top Committers</a>
+      <a mat-list-item routerLink="/repos" routerLinkActive ="active">Top Committers</a>
+      <a mat-list-item routerLink="/pull-rate" routerLinkActive ="active">Pull Acceptance Rate</a>
+      <a mat-list-item routerLink="/issues" routerLinkActive ="active">Repository Issues</a>
+      <a mat-list-item routerLink="/about-us" routerLinkActive ="active">About Us</a>
       <a mat-list-item routerLink="/meet-the-team" routerLinkActive ="active">Meet the Team</a>
     </mat-nav-list>
   </mat-sidenav>
@@ -23,8 +25,6 @@
       </button>
       <span>Group 12 Final Project</span>
     </mat-toolbar>
-    <!-- Add Content Here -->
-    <h1>Welcome to Group 12's Final Project for 4320!</h1>
     <router-outlet></router-outlet>
 
   </mat-sidenav-content>
