@@ -9,8 +9,8 @@
 	- Must have node, ng & angular cli installed
 
   1.	In terminal, download “final-project-app” from github
-  2.	cd to:  
-      final-project app
+  2.	change directory:  
+      cd (local_path)/final-project app
   3.	run:  
 	    ng serv  
          -	If encounter ERROR:   
