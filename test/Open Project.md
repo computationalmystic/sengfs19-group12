@@ -2,7 +2,7 @@
 
 
 - Method One, Using Chrome
-    - navagate to:
+    - Navigate to:  
       https://group12sprint3.firebaseapp.com/home
   
 - Method Two, Using Terminal
