@@ -15,8 +15,8 @@ The page consists of a side menu listing the options:
   this menu should be visible from every page.
   
 The main body of the page features a scrolling visual and invites the user to learn more about the Augur by navigating to the  
-"http://augur.osshealth.io/api_docs/" .  
-through a button titled "Learn More"   
+"http://augur.osshealth.io/api_docs/"    
+through a button titled "Learn More".   
 
 Below this, still in the main body, the user can read about the other pages before choosing to navigate to :
   - Top committers
