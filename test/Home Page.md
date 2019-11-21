@@ -1,7 +1,7 @@
 # Home Page
 
 Home page can be found at this URL:  
-  https://group12sprint3.firebaseapp.com/home
+  https://group12sprint3.firebaseapp.com/home  
   and should be the first page opened when project is launched.  
   
 The page consists of a side menu listing the options:
