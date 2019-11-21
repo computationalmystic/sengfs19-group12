@@ -5,7 +5,8 @@
   -On Local Machine with Terminal  
   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md
   
-- Home Page
+- Home Page  
+  https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Home%20Page.md
 
 - Learn More About Augur
 
