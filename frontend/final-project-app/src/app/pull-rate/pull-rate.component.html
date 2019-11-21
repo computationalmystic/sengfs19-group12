@@ -1,1 +1,12 @@
-<p>pull-rate works!</p>
+<button onclick="groupList()">Click me first to retreive data from API</button>
+<div id="headBar">
+    <select id="groupList" onchange="repoList(this.selectedIndex-1)">
+        <option disabled selected>Project List</option>
+    </select>
+    <select id="repoList">
+    </select>
+    <input type="button" onclick="selectRepo()" value="Get Information">
+</div>
+
+<h2>Experimental - Pull Request Acceptance Rate (Repo)</h2>
+<div id="pullGraph"></div>

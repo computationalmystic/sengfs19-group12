@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Repository Data</title>
-        <script src="../repos/repos.js"></script>
-        <script src="https://www.gstatic.com/charts/loader.js"></script>
-    </head>
-    <body onload="groupList()">
-        <div id="headBar">
-            <select id="groupList" onchange="repoList(this.selectedIndex-1)">
-                <option disabled selected>Project List</option>
-            </select>
-            <select id="repoList">
-
-            </select>
-            <input type="text" placeholder="filter repos" onkeypress="filterRepos(this.value)">
-            <input type="button" onclick="selectRepo()" value="Get Repo Metrics">
-        </div>
-        <div id="piechart"></div>
-        <script src="../repos/Repos.js"></script>
-    </body>
-</html>
+<button onclick="groupList()">Click me first to retreive data from API</button>
+<div id="headBar">
+    <select id="groupList" onchange="repoList(this.selectedIndex-1)">
+        <option disabled selected>Project List</option>
+    </select>
+    <select id="repoList">
+    </select>
+    <input type="button" onclick="selectRepo()" value="Get Information">
+</div>
+<h2><br><br>Evolution - Issues New (Repo)</h2>
+<div id="colGraph"></div>
+<h2>Experimental - Pull Request Acceptance Rate (Repo)</h2>
+<div id="pullGraph"></div>
+<h2>Experimental - Top Committers (Repo)</h2>
+<div id="piechart"></div>
