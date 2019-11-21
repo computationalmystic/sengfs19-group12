@@ -5,19 +5,19 @@ let shortList = new Array();
 let acceptList = new Array();
 let issueList = new Array();
 function filterRepos(keyw){
-let list = document.getElementById("repoList");
-let included = new Array();
-for(var i=0;i<list.length;i++){
-    let txt = list.options[i].text;
-    let include = txt.toLowerCase().startsWith(keyw);
-    if(include){
-        list.options[i].style.display = 'list-item';
-        included.push(i);
-    } else {
-        list.options[i].style.display = 'none';
+    let list = document.getElementById("repoList");
+    let included = new Array();
+    for(var i=0;i<list.length;i++){
+        let txt = list.options[i].text;
+        let include = txt.toLowerCase().startsWith(keyw);
+        if(include){
+            list.options[i].style.display = 'list-item';
+            included.push(i);
+        } else {
+            list.options[i].style.display = 'none';
         }
     }
-list.selectedIndex = included[0];
+    list.selectedIndex = included[0];
 }    
 
 async function groupList(){
@@ -30,6 +30,7 @@ async function groupList(){
         list.options.add(option);
     }
 }
+
 async function getGroups(){
     let groupsUrl = base + "/repo-groups/";
     groups = await fetchData(groupsUrl);
@@ -48,6 +49,7 @@ async function repoList(groupIndex){
         list.options.add(option);
     }
 }
+
 async function getRepos(groupIndex){
     let group = groups[groupIndex];
     let reposUrl = base + "/repo-groups/" + group.repo_group_id + "/repos/";
@@ -65,21 +67,107 @@ function selectRepo(){
     getNewIssues(group.repo_group_id, repo.repo_id);
 }
 
-async function fetchData(url){
-    let response =  await fetch(url);
-    let json = await response.json();
-    return json;
+
+
+async function getNewIssues(groupID, repoID){
+    let issueURL = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/issues-new?period=week";
+    try{
+        let newIssues = await fetchData(issueURL);
+        console.log(newIssues)
+        for(let issue of newIssues){
+            issue.date = issue.date.slice(0,10);
+            console.dir(issue);
+            issueList.push(issue);
+        }
+        callDrawNewIssueChart();
+    } catch(e){
+        document.getElementById("colGraph").innerHTML = "The selected repo is not accepting that request";
+    }
+}
+
+function callDrawNewIssueChart(){
+    google.charts.load('current', {packages:['corechart']});
+    try{
+        google.charts.setOnLoadCallback(drawNewIssueChart);
+    }catch(e){
+        document.getElementById("colGraph").innerHTML = "The selected repo is not accepting that request";
+    }
+}
+
+function drawNewIssueChart(){
+    var dataElements = [
+        ['date', 'issues'],
+    ];
+    for(let item of issueList){
+        var dataItem = new Array();
+        if (item.issues>=100){item.issues = 100;}
+        dataItem.push(item.date, item.issues);
+        dataElements.push(dataItem);
+    }
+    var data = google.visualization.arrayToDataTable(dataElements);
+    var options = {
+        width : 600, 
+        height : 400, 
+        vAxis:{
+            ticks:[0,10,20,30,40,50,60,70,80,90,100]
+        }
+    }
+    var chart = new google.visualization.ColumnChart(document.getElementById('colGraph'));
+    chart.draw(data, options);
+    removeGoogleErrors()
+}
+
+async function getPullAcceptance(groupID, repoID){
+    let acceptUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/pull-request-acceptance-rate";
+    try{
+        let acceptanceRate = await fetchData(acceptUrl)
+        console.log(acceptanceRate)
+        for(let acceptance of acceptanceRate){
+            acceptance.date = acceptance.date.slice(0,10);
+            console.dir(acceptance);
+            acceptList.push(acceptance);
+        }
+        callDrawAcceptanceChart();
+    }catch(e){
+        document.getElementById("pullGraph").innerHTML = "The selected repo is not accepting that request";
+    }
+}
+
+
+function callDrawAcceptanceChart(){
+    google.charts.load('current', {packages:['corechart']});
+    try{
+         google.charts.setOnLoadCallback(drawAcceptanceChart);
+    }catch(e){
+        document.getElementById("pullGraph").innerHTML = "The selected repo is not accepting that request";
+    }
+}
+function drawAcceptanceChart(){
+    var dataElements = [
+        ['date', 'rate'],
+    ];
+    for(let item of acceptList){ 
+        var dataItem = new Array();
+        dataItem.push(item.date, item.rate);
+        dataElements.push(dataItem);
+    }
+    var data = google.visualization.arrayToDataTable(dataElements);
+
+    var options = {'width':600, 'height' :400};
+    var chart = new google.visualization.LineChart(document.getElementById('pullGraph'));
+    chart.draw(data, options);
+    removeGoogleErrors()
 }
 
 async function getTopCommitters(groupID, repoID){
     let total = 0;
-    let topUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/top-committers?threshold=0.4";
+    let topUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/top-committers?threshold=0.5";
     try{
         let topComitters = await fetchData(topUrl);
         for(let committer of topComitters){
             total += committer.commits;
         }
-        shortList.length = 0;
+        shortList.length = 0; //clear the shortList
         for(let committer of topComitters){
             var topComitter = {
                 email: committer.email,
@@ -95,14 +183,19 @@ async function getTopCommitters(groupID, repoID){
 
 function callDrawTopChart(){
     google.charts.load('current', {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawTopChart);
+    try{
+        google.charts.setOnLoadCallback(drawTopChart);
+    }catch(e) {
+        document.getElementById("piechart").innerHTML = "The selected repo is not accepting that request";
+    }
+    
 }
 
 function drawTopChart(){
     var dataElements = [
         ['email', 'commits'],
     ];
-    for(let item of shortList){ 
+    for(let item of shortList){ //what in tarnation
         var dataItem = new Array();
         dataItem.push(item.email, item.commits);
         dataElements.push(dataItem);
@@ -112,4 +205,21 @@ function drawTopChart(){
     var options = {'width':600, 'height' :400};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
+    removeGoogleErrors()
 }
+
+async function fetchData(url){
+    let response =  await fetch(url);
+    let json = await response.json();
+    return json;
+}
+
+function removeGoogleErrors() {
+                var id_root = "google-visualization-errors-all-";
+                        var index = 1;
+
+                    while (document.getElementById(id_root + index.toString()) != null) {
+                            document.getElementById(id_root + index.toString()).style.display = 'none';
+                            index += 2;
+                    } 
+                }
