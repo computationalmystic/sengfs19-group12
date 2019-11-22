@@ -40,6 +40,8 @@ Ongoing Front End Work/Updates can be found:
     - Y-axis: Number of Pulls
     - Display as Line Chart
   - List of Repositories and Repository Issues
+    - X-axis: Dates
+    - Y-axis: Number of Issues
     - Display as Bar Graph   
 - Create an About page for Users to understand function of site
 - Create a Meet the Team for Developers to show off their pets
