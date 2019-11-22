@@ -26,11 +26,12 @@ In addition, we were able to successfully set up our site to run off of a Fireba
      - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
 - Implement calls and visualisations on site
   - Top 10 Commiters
-    - List Of Names (Emails)
-    - Pie Chart Comparing Top Commiters
+    - List Of Names
+    - Pie Chart Comparing Top Committers
   - Pulls and Pull acceptance rates of success/failures
+    -
+ 
   - List of Repositories and Repository Issues
-  - Search Usernames for "dog", "cat" or "fish" 
 
 
 **Future Design Goals**
