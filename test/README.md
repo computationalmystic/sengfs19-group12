@@ -1,7 +1,9 @@
 # Testings and Protocols
 ## For Group 12 Project "AUGUR Metrics Visualisations"
 
-
+In this repository is a list of the different protocols one should go through to use/test our site.  
+The different written protocols are listed and link below, as well.  
+After the project is launched, menu should display the navigation choices, the use of which are described in their respective protocols.   
 
 - Open Project  
   -On Browser with Link  
@@ -14,12 +16,14 @@
 - Learn More About Augur  
   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Learn%20More%20About%20Augur.md
 
-- Top Committers
+- Top Committers 
 
-- Pull Acceptance Rate
+- Pull Acceptance Rate  
   
-- Repository Issues
+- Repository Issues  
 
-- About
-
-- Meet The Team
+- About  
+  A page describing the uses of the site.  No functions to be tested.
+  
+- Meet The Team  
+  A page decribing the creators of the site.  No functions to be tested.
