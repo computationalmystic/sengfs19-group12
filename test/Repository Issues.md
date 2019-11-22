@@ -1,6 +1,6 @@
 # Repository Issues 
 
-Design to illustrate number of issues in repositories. 
+Designed to illustrate number of issues in repositories. 
 
 
 (After selecting & navigating to page)
