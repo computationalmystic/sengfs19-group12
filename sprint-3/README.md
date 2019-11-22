@@ -32,6 +32,7 @@ Ongoing Front End Work/Updates can be found:
     - Display as Pie Chart Comparing Top Committers of A Repo
 
 **Primary Goal: Launch first iteration of complete project**  
+
 **Other Goals:**
 - Display data from API calls on two seperate front end pages
   - Pulls and Pull acceptance rates of success/failures
