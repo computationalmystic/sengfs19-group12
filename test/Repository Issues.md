@@ -21,7 +21,7 @@ Design to illustrate number of issues in repositories.
     6. Select  
       "Get Information"  
       
-    7. Pie Chart should appear in field below.  
+    7. Bar Graph should appear in field below.  
       ex displays: Barchart with several dates showing multiple issues on most dates
 
 Issues may arise from one allowing time for either drop down to load.
