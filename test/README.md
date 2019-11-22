@@ -1,7 +1,7 @@
 # Testings and Protocols
 ## For Group 12 Project "AUGUR Metrics Visualisations"
 
-In this repository is a list of the different protocols one should go through to use/test our site.  
+In this folder is a list of the different protocols one should go through to use/test our site.  
 The different written protocols are listed and linked below.  
 After the project is launched, menu should display the navigation choices, the use of which are described in their respective protocols.   
 
