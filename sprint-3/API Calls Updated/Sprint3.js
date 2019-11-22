@@ -1,4 +1,5 @@
 const base = "http://augur.osshealth.io:5000/api/unstable";
+var index = 1;
 let groups;
 let repos;
 let shortList = new Array();
@@ -62,9 +63,13 @@ function selectRepo(){
     let repo = repos[repoIndex];
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
+    document.getElementById("colGraph").innerHTML = "";
+    document.getElementById("pullGraph").innerHTML ="";
+    document.getElementById("piechart").innerHTML = "";
     getTopCommitters(group.repo_group_id, repo.repo_id);
     getPullAcceptance(group.repo_group_id, repo.repo_id);
     getNewIssues(group.repo_group_id, repo.repo_id);
+    
 }
 
 
@@ -81,17 +86,14 @@ async function getNewIssues(groupID, repoID){
         }
         callDrawNewIssueChart();
     } catch(e){
-        document.getElementById("colGraph").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("colGraph").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
 function callDrawNewIssueChart(){
     google.charts.load('current', {packages:['corechart']});
-    try{
-        google.charts.setOnLoadCallback(drawNewIssueChart);
-    }catch(e){
-        document.getElementById("colGraph").innerHTML = "The selected repo is not accepting that request";
-    }
+    google.charts.setOnLoadCallback(drawNewIssueChart);
+    
 }
 
 function drawNewIssueChart(){
@@ -114,7 +116,7 @@ function drawNewIssueChart(){
     }
     var chart = new google.visualization.ColumnChart(document.getElementById('colGraph'));
     chart.draw(data, options);
-    removeGoogleErrors()
+        removeGoogleErrors();
 }
 
 async function getPullAcceptance(groupID, repoID){
@@ -129,18 +131,14 @@ async function getPullAcceptance(groupID, repoID){
         }
         callDrawAcceptanceChart();
     }catch(e){
-        document.getElementById("pullGraph").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("pullGraph").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
 
 function callDrawAcceptanceChart(){
     google.charts.load('current', {packages:['corechart']});
-    try{
-         google.charts.setOnLoadCallback(drawAcceptanceChart);
-    }catch(e){
-        document.getElementById("pullGraph").innerHTML = "The selected repo is not accepting that request";
-    }
+    google.charts.setOnLoadCallback(drawAcceptanceChart);
 }
 function drawAcceptanceChart(){
     var dataElements = [
@@ -156,7 +154,7 @@ function drawAcceptanceChart(){
     var options = {'width':600, 'height' :400};
     var chart = new google.visualization.LineChart(document.getElementById('pullGraph'));
     chart.draw(data, options);
-    removeGoogleErrors()
+    removeGoogleErrors();
 }
 
 async function getTopCommitters(groupID, repoID){
@@ -177,18 +175,13 @@ async function getTopCommitters(groupID, repoID){
         }
         callDrawTopChart();
     } catch(e) {
-        document.getElementById("piechart").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("piechart").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
 function callDrawTopChart(){
     google.charts.load('current', {packages:['corechart']});
-    try{
-        google.charts.setOnLoadCallback(drawTopChart);
-    }catch(e) {
-        document.getElementById("piechart").innerHTML = "The selected repo is not accepting that request";
-    }
-    
+    google.charts.setOnLoadCallback(drawTopChart);
 }
 
 function drawTopChart(){
@@ -205,7 +198,7 @@ function drawTopChart(){
     var options = {'width':600, 'height' :400};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
-    removeGoogleErrors()
+    removeGoogleErrors();
 }
 
 async function fetchData(url){
@@ -215,11 +208,11 @@ async function fetchData(url){
 }
 
 function removeGoogleErrors() {
-                var id_root = "google-visualization-errors-all-";
-                        var index = 1;
+    var id_root = "google-visualization-errors-all-";
+    
+    while (document.getElementById(id_root + index.toString()) != null) {
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
+         index += 2;
+    } 
 
-                    while (document.getElementById(id_root + index.toString()) != null) {
-                            document.getElementById(id_root + index.toString()).style.display = 'none';
-                            index += 2;
-                    } 
-                }
+}

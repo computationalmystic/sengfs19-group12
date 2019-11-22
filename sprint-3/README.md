@@ -1,24 +1,56 @@
 # AUGUR Metrics Visualisations
-
 ### CS 4320/7320
-
-### Group 12 - Front End Group (previously Full Stack)
-
-- Weiyu Feng
-- Sarah McLaughlin
-- Christina Roberts
-- Ziang Xu
-
+### Group 12 - Frontend Group
+ - Weiyu Feng
+ - Sarah McLaughlin
+ - Christina Roberts
+ - Ziang Xu
+ 
 ## Sprint 3
-### Link to Website:
 
+**Link to Website**
 
-### Transitioning to Front End
-After Sprint 2, it was decided that we would be a Front End group rather than a Full Stack group. We decided as a team to look over the new requirements for front end work and we decided how we would split this up and decide to build off of our already existing work. From our previous submission of Sprint 2, we had originally decided to make API calls to Augur and store the data retrieved into our Firebase database retrieve that data on our UI. In transitioning to front end work, we decided to keep our front end work all the focus and pull in data within javascript to make our API calls.
+https://cs4320final.firebaseapp.com/repo
 
-### Intended Design
-From our previous work in Sprint 2, we already had one UI prepared with a visualization of each repositories top committers. For our other 2 front end pages, we decided to continue with our original plan of making API calls and split those into our 2 separate front end pages. For one of our new front end pages, we made API calls to retrieve data regarding pull acceptance rate and displayed it using a line chart. For the other new front end page, we used API calls to retrieve data that showed issues that appeared when pushing data to repositories and the date they occurred shown on a bar graph.
+**Intended Design**
+By using Angular Frontend Framework and HTTPClient calls to the Augur interface, we implemented a user-friendly frontend view of the data it contains, including a navigation bar and visuals of multiple metrics within repositories. Users can view the different calculated metrics of committers, pull rates, and repository issues for each chosen repository of the Augur database in line, bar, and pie chart formats.
 
-In addition, we decided to make our home page more user friendly with a stronger front end focus, and we also included extra tabs about the team and about us and our work with Augur.
+In addition, we were able to successfully set up our site to run off of a Firebase server, if users choose not to run the project locally.
 
-### Goals for Sprint 4:
+## Goals For Sprint 3
+  Between Sprint 2 and Sprint 3, our group transitioned from a Full Stack team to a Front End team. As such, our goals were changed and updated: 
+
+Ongoing Front End Work/Updates can be found:  
+   https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend 
+   
+**Previous Accomplishments**
+- Integrate New Firebase Server and Database
+- Pull Data Within JavaScript Calls
+- Implement calls and visualisations on site
+  - Top 10 Committers
+    - List Of Usernames/Emails
+    - Display as Pie Chart Comparing Top Committers of A Repo
+
+**Primary Goal: Launch first iteration of complete project**  
+
+**Other Goals:**
+- Display data from API calls on two separate front end pages
+  - Pulls and Pull acceptance rates of success/failures
+    - Display as Line Chart
+  - List of Repositories and Repository Issues
+    - Display as Bar Graph   
+- Create an About page for Users to understand function of site
+- Create a Meet the Team for Developers to show off their pets
+- Create Protocols and Tests for navigating Project:  
+   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
+   
+
+## Future Design Goals  
+  - Improve upon features.
+  - Search for any bugs in site.
+  - Fine tune any errors or oddities. 
+  - Make visually more appealing.
+  
+  
+
+ 
