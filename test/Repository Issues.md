@@ -25,8 +25,8 @@ Design to illustrate number of issues in repositories.
       ex displays: Barchart with several dates showing multiple issues on most dates
 
 Issues may arise from one allowing time for either drop down to load.
-Also, if data is inappropriate for the graph or is not available, some repositories will disply an error:  
-    Data column(s) for axis #0 cannot be of type string
+Also, if data is not available, field will disply an error:  
+    Data column(s) for axis #0 cannot be of type string  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
 
 
