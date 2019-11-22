@@ -34,6 +34,9 @@ The different written protocols are listed and linked below.
 
 ## Issues/Testing Fails
 ~
-Nov 20, 2019:  Issue with graph clearing in Pull Acceptance Rate and Repository Issues.   
+Nov 20, 2019:  Issue with graph field clearing in Pull Acceptance Rate and Repository Issues.   
   - Graphs of previously selected points would not clear if following selection had no data to display.
   - Issue Resolved
+  
+Nov 21, 2019:  Issue with line chart in Pull Acceptance Rate.
+  - Data points of selections added to previous line graph, instead of shown on their own.
