@@ -17,10 +17,13 @@ After the project is launched, menu should display the navigation choices, the u
   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Learn%20More%20About%20Augur.md
 
 - Top Committers 
+  https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md
 
 - Pull Acceptance Rate  
+  https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Pull%20Acceptance%20Rate.md
   
-- Repository Issues  
+- Repository Issues
+  https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Repository%20Issues.md
 
 - About  
   A page describing the uses of the site.  No functions to be tested.
