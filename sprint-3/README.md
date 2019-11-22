@@ -36,6 +36,8 @@ Ongoing Front End Work/Updates can be found:
 **Other Goals:**
 - Display data from API calls on two separate front end pages
   - Pulls and Pull acceptance rates of success/failures
+    - X-axis: Dates
+    - Y-axis: Number of Pulls
     - Display as Line Chart
   - List of Repositories and Repository Issues
     - Display as Bar Graph   
