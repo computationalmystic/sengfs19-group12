@@ -27,9 +27,8 @@ In addition, we were able to successfully set up our site to run off of a Fireba
 - Implement calls and visualisations on site
   - Top 10 Commiters
     - List Of Names
-    - Pie Chart Comparing Top Committers
+    - Pie Chart Comparing Top Committers 
   - Pulls and Pull acceptance rates of success/failures
-    -
  
   - List of Repositories and Repository Issues
 
