@@ -25,6 +25,10 @@ Designed to be able to view the top committers of selected repostories.
 
 Issues may arise from one allowing time for either drop down to load.  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
+
+**NEXT**  
+Pull Acceptance Rates:  
+https://github.com/computationalmystic/sengfs19-group12/edit/master/test/Pull%20Acceptance%20Rate.md
       
 
 
