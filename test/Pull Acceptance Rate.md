@@ -34,7 +34,7 @@ Top Committers
 https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md
 
 **NEXT**   
-Repository Issues . 
+Repository Issues   
 https://github.com/computationalmystic/sengfs19-group12/edit/master/test/Repository%20Issues.md
       
 
