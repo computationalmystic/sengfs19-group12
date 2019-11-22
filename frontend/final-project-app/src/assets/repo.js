@@ -1,23 +1,24 @@
 const base = "http://augur.osshealth.io:5000/api/unstable";
+var index = 1;
 let groups;
 let repos;
 let shortList = new Array();
 let acceptList = new Array();
 let issueList = new Array();
 function filterRepos(keyw){
-let list = document.getElementById("repoList");
-let included = new Array();
-for(var i=0;i<list.length;i++){
-    let txt = list.options[i].text;
-    let include = txt.toLowerCase().startsWith(keyw);
-    if(include){
-        list.options[i].style.display = 'list-item';
-        included.push(i);
-    } else {
-        list.options[i].style.display = 'none';
+    let list = document.getElementById("repoList");
+    let included = new Array();
+    for(var i=0;i<list.length;i++){
+        let txt = list.options[i].text;
+        let include = txt.toLowerCase().startsWith(keyw);
+        if(include){
+            list.options[i].style.display = 'list-item';
+            included.push(i);
+        } else {
+            list.options[i].style.display = 'none';
+            }
         }
-    }
-list.selectedIndex = included[0];
+    list.selectedIndex = included[0];
 }    
 
 async function groupList(){
@@ -60,6 +61,9 @@ function selectRepo(){
     let repo = repos[repoIndex];
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
+    // document.getElementById("colGraph").innerHTML = "";
+    // document.getElementById("pullGraph").innerHTML ="";
+    // document.getElementById("piechart").innerHTML = "";
     getTopCommitters(group.repo_group_id, repo.repo_id);
     getPullAcceptance(group.repo_group_id, repo.repo_id);
     getNewIssues(group.repo_group_id, repo.repo_id);
@@ -71,7 +75,6 @@ async function fetchData(url){
     let json = await response.json();
     return json;
 }
-
 
 async function getNewIssues(groupID, repoID){
     let issueURL = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/issues-new?period=week";
@@ -85,7 +88,7 @@ async function getNewIssues(groupID, repoID){
         }
         callDrawNewIssueChart();
     } catch(e){
-        document.getElementById("colGraph").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("colGraph").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
@@ -114,10 +117,8 @@ function drawNewIssueChart(){
     }
     var chart = new google.visualization.ColumnChart(document.getElementById('colGraph'));
     chart.draw(data, options);
+    removeGoogleErrors();
 }
-
-
-
 
 async function getPullAcceptance(groupID, repoID){
     let acceptUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/pull-request-acceptance-rate";
@@ -131,15 +132,15 @@ async function getPullAcceptance(groupID, repoID){
         }
         callDrawAcceptanceChart();
     }catch(e){
-        document.getElementById("pullGraph").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("pullGraph").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
-
 
 function callDrawAcceptanceChart(){
     google.charts.load('current', {packages:['corechart']});
     google.charts.setOnLoadCallback(drawAcceptanceChart);
 }
+
 function drawAcceptanceChart(){
     var dataElements = [
         ['date', 'rate'],
@@ -154,11 +155,8 @@ function drawAcceptanceChart(){
     var options = {'width':600, 'height' :400};
     var chart = new google.visualization.LineChart(document.getElementById('pullGraph'));
     chart.draw(data, options);
+    removeGoogleErrors();
 }
-
-
-
-
 
 async function getTopCommitters(groupID, repoID){
     let total = 0;
@@ -168,7 +166,7 @@ async function getTopCommitters(groupID, repoID){
         for(let committer of topComitters){
             total += committer.commits;
         }
-        shortList.length = 0;
+        shortList.length = 0; //clear the shortList
         for(let committer of topComitters){
             var topComitter = {
                 email: committer.email,
@@ -178,7 +176,7 @@ async function getTopCommitters(groupID, repoID){
         }
         callDrawTopChart();
     } catch(e) {
-        document.getElementById("piechart").innerHTML = "The selected repo is not accepting that request";
+        document.getElementById("piechart").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
@@ -201,4 +199,15 @@ function drawTopChart(){
     var options = {'width':600, 'height' :400};
     var chart = new google.visualization.PieChart(document.getElementById('piechart'));
     chart.draw(data, options);
+    removeGoogleErrors();
+}
+
+function removeGoogleErrors() {
+    var id_root = "google-visualization-errors-all-";
+    
+    while (document.getElementById(id_root + index.toString()) != null) {
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
+         index += 2;
+    } 
+
 }
