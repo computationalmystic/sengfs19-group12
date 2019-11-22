@@ -33,7 +33,7 @@ In addition, we were able to successfully set up our site to run off of a Fireba
   - Pulls and Pull acceptance rates of success/failures
     - Display as Line Chart
   - List of Repositories and Repository Issues
-    - Display as Bar Graph
+    - Display as Bar Graph  
 Front End Work/Updates can be found:  
    - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
 
