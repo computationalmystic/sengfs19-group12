@@ -28,7 +28,7 @@ In addition, we were able to successfully set up our site to run off of a Fireba
     - List Of Names
     - Display as Pie Chart Comparing Top Committers of A Repo
 
-*** Primary Goal: Launch first iteraction of complete project  
+*** Primary Goal: Launch first iteration of complete project  
 - Display data from API calls on two seperate front end pages
   - Pulls and Pull acceptance rates of success/failures
     - Display as Line Chart
