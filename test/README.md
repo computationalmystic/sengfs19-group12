@@ -4,7 +4,7 @@
 In this folder is a list of the different protocols one should go through to use/test our site.  
 The different written protocols are listed and linked below.    
 
- - Open Project  
+ - **Open Project**  
     - On Browser with Link  
     - On Local Machine with Terminal  
   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md
