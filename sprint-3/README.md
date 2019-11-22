@@ -13,7 +13,7 @@
 https://cs4320final.firebaseapp.com/repo
 
 **Intended Design**
-By using Angular Frontend Framework and HTTPClient calls to the Augur interface, we implemented a user-friendly frontend view of the data it contains, including a navigation bar and visuals of multiple metrics within repoitories. Users can view the different calculated metrics of committers, pull rates, and repository issues for each chosen repository of the Augur database in table and pie chart formats.
+By using Angular Frontend Framework and HTTPClient calls to the Augur interface, we implemented a user-friendly frontend view of the data it contains, including a navigation bar and visuals of multiple metrics within repoitories. Users can view the different calculated metrics of committers, pull rates, and repository issues for each chosen repository of the Augur database in line, bar, and pie chart formats.
 
 In addition, we were able to successfully set up our site to run off of a Firebase server, if users choose not to run the project locally.
 
