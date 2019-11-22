@@ -24,7 +24,7 @@ Designed to be able to view the top committers of selected repostories.
       ex displays: levitt@openssl.org-29.2% ; matt@openssl.org-16.7% ; other contributers-54%"
 
 Issues may arise from one allowing time for either drop down to load.  
-Graphs are from data collected at time of calls & example numbers won't neccessarily stay accurate over time. 
+Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
       
 
 
