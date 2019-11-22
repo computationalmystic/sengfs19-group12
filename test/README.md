@@ -31,3 +31,9 @@ The different written protocols are listed and linked below.
   
 - Meet The Team  
   A page decribing the creators of the site.  No functions to be tested.
+
+
+~
+Nov 20, 2019:  Issue with graph clearing in Pull Acceptance Rate and Repository Issues.   
+  - Graphs of previously selected points would not clear if following selection had no data to display.
+  - Issue Resolved
