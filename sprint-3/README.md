@@ -36,6 +36,9 @@ In addition, we were able to successfully set up our site to run off of a Fireba
     - Display as Bar Graph  
 Front End Work/Updates can be found:  
    - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
+- Create Protocols & Tests for navigating project
+- Create an About page for Users to understand function of site
+- Create a Meet the Team for Developers to show off their pets
 
 
 
