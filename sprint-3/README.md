@@ -17,10 +17,13 @@ By using Angular Frontend Framework and HTTPClient calls to the Augur interface,
 
 In addition, we were able to successfully set up our site to run off of a Firebase server, if users choose not to run the project locally.
 
-**Goals For Sprint 3**
+## Goals For Sprint 3
   Between Sprint 2 and Sprint 3, our group tranistioned from a Full Stack team to a Front End team. As such, our goals were changed and updated: 
 
-*** Previous Accomplishments 
+Ongoing Front End Work/Updates can be found:  
+   https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend 
+   
+**Previous Accomplishments**
 - Integrate New Firebase Server and Database
 - Pull Data Within JavaScript Calls
 - Implement calls and visualisations on site
@@ -28,20 +31,18 @@ In addition, we were able to successfully set up our site to run off of a Fireba
     - List Of Names
     - Display as Pie Chart Comparing Top Committers of A Repo
 
-*** Primary Goal: Launch first iteration of complete project  
+**Primary Goal: Launch first iteration of complete project**  
+**Other Goals:**
 - Display data from API calls on two seperate front end pages
   - Pulls and Pull acceptance rates of success/failures
     - Display as Line Chart
   - List of Repositories and Repository Issues
-    - Display as Bar Graph  
-Front End Work/Updates can be found:  
-   - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
+    - Display as Bar Graph   
 - Create an About page for Users to understand function of site
 - Create a Meet the Team for Developers to show off their pets
 - Create Protocols and Tests for navigating Project:  
    https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
-
-
+   
 
 **Future Design Goals**
   - Improve upon features.
