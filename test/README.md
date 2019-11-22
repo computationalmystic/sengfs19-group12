@@ -20,6 +20,6 @@
   
 - Repository Issues
 
-- About Us
+- About
 
 - Meet The Team
