@@ -6,7 +6,7 @@
  - Christina Roberts
  - Ziang Xu
  
-## Sprint 2
+## Sprint 3
 
 **Link to Website**
 
@@ -45,7 +45,7 @@ Ongoing Front End Work/Updates can be found:
    https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
    
 
-**Future Design Goals**
+## Future Design Goals  
   - Improve upon features.
   - Search for any bugs in site.
   - Fine tune any errors or oddities. 
