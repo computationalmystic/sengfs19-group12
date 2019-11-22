@@ -12,7 +12,7 @@
   2.	change directory:  
       cd (local_path)/final-project-app
   3.	run:  
-	    ng serv  
+	    ng serve  
          -	If encounter ERROR:   
            Could not find module "@angular-devkit/build-angular"
 
