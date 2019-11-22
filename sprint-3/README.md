@@ -19,24 +19,32 @@ In addition, we were able to successfully set up our site to run off of a Fireba
 
 **Goals For Sprint 3**
   Between Sprint 2 and Sprint 3, our group tranistioned from a Full Stack team to a Front End team. As such, our goals were changed and updated: 
-  
+
+*** Previous Accomplishments 
 - Integrate New Firebase Server and Database
-- Display data
-   - Front End:
-     - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
+- Pull Data Within JavaScript Calls
 - Implement calls and visualisations on site
-  - Top 10 Commiters
+  - Top 10 Committers
     - List Of Names
-    - Pie Chart Comparing Top Committers 
+    - Display as Pie Chart Comparing Top Committers of A Repo
+
+*** Primary Goal: Launch first iteraction of complete project  
+- Display data from API calls on two seperate front end pages
   - Pulls and Pull acceptance rates of success/failures
- 
+    - Display as Line Chart
   - List of Repositories and Repository Issues
+    - Display as Bar Graph
+Front End Work/Updates can be found:  
+   - https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
+
 
 
 **Future Design Goals**
+  - Improve upon features.
   - Search for any bugs in site.
   - Fine tune any errors or oddities. 
   - Make visually more appealing.
-
+  
+  
 
  
