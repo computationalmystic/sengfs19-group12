@@ -28,7 +28,7 @@ Graphs are from data collected at time of calls & example figures won't neccessa
 
 **NEXT**  
 Pull Acceptance Rates:  
-https://github.com/computationalmystic/sengfs19-group12/edit/master/test/Pull%20Acceptance%20Rate.md
+https://github.com/computationalmystic/sengfs19-group12/master/test/Pull%20Acceptance%20Rate.md
       
 
 
