@@ -1,5 +1,8 @@
 const base = "http://augur.osshealth.io:5000/api/unstable";
 var index = 1;
+let repoX;
+let groupX;
+let check = sessionStorage.getItem("Check");
 let groups;
 let repos;
 let shortList = new Array();
@@ -16,8 +19,8 @@ function filterRepos(keyw){
             included.push(i);
         } else {
             list.options[i].style.display = 'none';
-            }
         }
+    }
     list.selectedIndex = included[0];
 }    
 
@@ -30,7 +33,18 @@ async function groupList(){
         option.innerHTML = group.rg_name;
         list.options.add(option);
     }
+        repoX = JSON.parse(sessionStorage.getItem('Repo'));
+        groupX = JSON.parse(sessionStorage.getItem('Group'));
+
+    if(check == null){
+       
+    }else{
+        getTopCommitters(groupX.repo_group_id, repoX.repo_id);
+        getPullAcceptance(groupX.repo_group_id, repoX.repo_id);
+        getNewIssues(groupX.repo_group_id, repoX.repo_id);
+    }
 }
+
 async function getGroups(){
     let groupsUrl = base + "/repo-groups/";
     groups = await fetchData(groupsUrl);
@@ -49,6 +63,7 @@ async function repoList(groupIndex){
         list.options.add(option);
     }
 }
+
 async function getRepos(groupIndex){
     let group = groups[groupIndex];
     let reposUrl = base + "/repo-groups/" + group.repo_group_id + "/repos/";
@@ -56,25 +71,22 @@ async function getRepos(groupIndex){
     return repos;
 }
 
+
+
 function selectRepo(){ 
     let repoIndex = document.getElementById("repoList").selectedIndex;
     let repo = repos[repoIndex];
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
-    // document.getElementById("colGraph").innerHTML = "";
-    // document.getElementById("pullGraph").innerHTML ="";
-    // document.getElementById("piechart").innerHTML = "";
-    getTopCommitters(group.repo_group_id, repo.repo_id);
-    getPullAcceptance(group.repo_group_id, repo.repo_id);
-    getNewIssues(group.repo_group_id, repo.repo_id);
-    getReposData(group.repo_group_id);
+    sessionStorage.setItem("Repo", JSON.stringify(repo));
+    sessionStorage.setItem("Group", JSON.stringify(group));
+    sessionStorage.setItem("Check", 1);
+    location.reload();
+    
+
 }
 
-async function fetchData(url){
-    let response =  await fetch(url);
-    let json = await response.json();
-    return json;
-}
+
 
 async function getNewIssues(groupID, repoID){
     let issueURL = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/issues-new?period=week";
@@ -95,6 +107,7 @@ async function getNewIssues(groupID, repoID){
 function callDrawNewIssueChart(){
     google.charts.load('current', {packages:['corechart']});
     google.charts.setOnLoadCallback(drawNewIssueChart);
+    
 }
 
 function drawNewIssueChart(){
@@ -117,7 +130,7 @@ function drawNewIssueChart(){
     }
     var chart = new google.visualization.ColumnChart(document.getElementById('colGraph'));
     chart.draw(data, options);
-    removeGoogleErrors();
+        removeGoogleErrors();
 }
 
 async function getPullAcceptance(groupID, repoID){
@@ -136,11 +149,11 @@ async function getPullAcceptance(groupID, repoID){
     }
 }
 
+
 function callDrawAcceptanceChart(){
     google.charts.load('current', {packages:['corechart']});
     google.charts.setOnLoadCallback(drawAcceptanceChart);
 }
-
 function drawAcceptanceChart(){
     var dataElements = [
         ['date', 'rate'],
@@ -148,13 +161,7 @@ function drawAcceptanceChart(){
     for(let item of acceptList){ 
         var dataItem = new Array();
         dataItem.push(item.date, item.rate);
-
-        if (dataElements[1]){
-            dataElements.shift(dataItem);
-        }
-        else {
         dataElements.push(dataItem);
-        }
     }
     var data = google.visualization.arrayToDataTable(dataElements);
 
@@ -166,7 +173,7 @@ function drawAcceptanceChart(){
 
 async function getTopCommitters(groupID, repoID){
     let total = 0;
-    let topUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/top-committers?threshold=0.4";
+    let topUrl = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/top-committers?threshold=0.5";
     try{
         let topComitters = await fetchData(topUrl);
         for(let committer of topComitters){
@@ -195,7 +202,7 @@ function drawTopChart(){
     var dataElements = [
         ['email', 'commits'],
     ];
-    for(let item of shortList){ 
+    for(let item of shortList){ //what in tarnation
         var dataItem = new Array();
         dataItem.push(item.email, item.commits);
         dataElements.push(dataItem);
@@ -208,11 +215,17 @@ function drawTopChart(){
     removeGoogleErrors();
 }
 
+async function fetchData(url){
+    let response =  await fetch(url);
+    let json = await response.json();
+    return json;
+}
+
 function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****This data can not be retrieved from the server*****";
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrieved from the server*****";
          index += 2;
     } 
 
