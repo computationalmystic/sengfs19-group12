@@ -1,5 +1,8 @@
 const base = "http://augur.osshealth.io:5000/api/unstable";
 var index = 1;
+let repoX;
+let groupX;
+let check = sessionStorage.getItem("Check");
 let groups;
 let repos;
 let shortList = new Array();
@@ -30,6 +33,16 @@ async function groupList(){
         option.innerHTML = group.rg_name;
         list.options.add(option);
     }
+        repoX = JSON.parse(sessionStorage.getItem('Repo'));
+        groupX = JSON.parse(sessionStorage.getItem('Group'));
+
+    if(check == null){
+       
+    }else{
+        getTopCommitters(groupX.repo_group_id, repoX.repo_id);
+        getPullAcceptance(groupX.repo_group_id, repoX.repo_id);
+        getNewIssues(groupX.repo_group_id, repoX.repo_id);
+    }
 }
 
 async function getGroups(){
@@ -58,18 +71,19 @@ async function getRepos(groupIndex){
     return repos;
 }
 
+
+
 function selectRepo(){ 
     let repoIndex = document.getElementById("repoList").selectedIndex;
     let repo = repos[repoIndex];
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
-    document.getElementById("colGraph").innerHTML = "";
-    document.getElementById("pullGraph").innerHTML ="";
-    document.getElementById("piechart").innerHTML = "";
-    getTopCommitters(group.repo_group_id, repo.repo_id);
-    getPullAcceptance(group.repo_group_id, repo.repo_id);
-    getNewIssues(group.repo_group_id, repo.repo_id);
+    sessionStorage.setItem("Repo", JSON.stringify(repo));
+    sessionStorage.setItem("Group", JSON.stringify(group));
+    sessionStorage.setItem("Check", 1);
+    location.reload();
     
+
 }
 
 
