@@ -145,10 +145,16 @@ function drawAcceptanceChart(){
     var dataElements = [
         ['date', 'rate'],
     ];
-    for(let item of acceptList){ //what in tarnation
+    for(let item of acceptList){ 
         var dataItem = new Array();
         dataItem.push(item.date, item.rate);
+
+        if (dataElements[1]){
+            dataElements.shift(dataItem);
+        }
+        else {
         dataElements.push(dataItem);
+        }
     }
     var data = google.visualization.arrayToDataTable(dataElements);
 
@@ -206,7 +212,7 @@ function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
+         document.getElementById(id_root + index.toString()).innerHTML = "*****This data can not be retreived from the server*****";
          index += 2;
     } 
 
