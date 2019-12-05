@@ -31,30 +31,32 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 -frontend  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend  
 
-    Code:   final-project-app/src/app  
-      - nav-bar component
-        - with Angular Routing
-      - assets folder
-        - repo.js: HTTPClient calls to Augar API
-        - images added 
-      - about-us component 
-         - module.ts 
-         - component.html
-      - home component 
-         - module.ts 
-         - component.html
-      - issues component 
-         - module.ts 
-         - component.html
-      - meet-the-team 
-         - module.ts 
-         - component.html
-      - pull-rate 
-         - module.ts 
-         - component.html
-      - repos component 
-         - module.ts 
-         - component.html
+    Code:   frontend/final-project-app/src 
+	- /assets
+		- repo.js
+			- HTTPClient calls to Augar API
+		- images added 
+	- /app
+		- add nav-bar component
+		- add Angular Routing
+		- add about-us component 
+			- module.ts 
+			- component.html
+		- add home component 
+			 - module.ts 
+			 - component.html
+		- add issues component 
+			 - module.ts 
+			 - component.html
+		- add meet-the-team 
+			 - module.ts 
+			 - component.html
+		- add pull-rate component
+			 - module.ts 
+			 - component.html
+		- add repos component 
+			 - module.ts 
+			 - component.html
         
 -sprint-1  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-1  
@@ -81,7 +83,7 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-2
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3  
 
     Code:
-         - APICalls	Updated
+         - APICalls Updated
     Markdowns: 
          - README.md	  
          
