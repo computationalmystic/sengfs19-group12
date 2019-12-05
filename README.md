@@ -30,18 +30,82 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 **Folders & Code Modified/Created By Group 12**  
 -frontend  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend  
+
+    Code:   final-project-app/src/app 
+      - nav-bar component
+        - with Angular Routing
+      - assets folder
+        - repo.js: HTTPClient calls to Augar API
+        - images added 
+      - about-us component 
+         - module.ts 
+         - component.html
+      - home component 
+         - module.ts 
+         - component.html
+      - issues component 
+         - module.ts 
+         - component.html
+      - meet-the-team 
+         - module.ts 
+         - component.html
+      - pull-rate 
+         - module.ts 
+         - component.html
+      - repos component 
+         - module.ts 
+         - component.html
+        
 -sprint-1  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-1  
+
+    Markdowns:  
+     - AugurTables.png  
+     - SprintOne.md
+
 -sprint-2  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-2  
+
+    Code:
+         - APICalls	
+         - FinalProject	
+         - Sprint2.css	
+         - Sprint2.html	
+         - Sprint2.js	
+         - package-lock.json
+    Markdowns: 
+         - README.md	
+         - Link To Website	
+         
 -sprint-3  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3  
+
+    Code:
+         - APICalls	Updated
+    Markdowns: 
+         - README.md	  
+         
 -sprint-4  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-4  
+
+    Markdowns:  
+       - README.md 
+
 -test  
-https://github.com/computationalmystic/sengfs19-group12/tree/master/test  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/test      		  
+
+    Markdowns:  
+       - Home Page.md  
+       - Learn More About Augur.md  
+       - Open Project.md  
+       - Pull Acceptance Rate.md	 
+       - README.md	 
+       - Repository Issues.md	 
+       - Top Committers.md 
 
 
+
+				
 
 
    
