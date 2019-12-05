@@ -82,11 +82,15 @@ function selectRepo(){
     sessionStorage.setItem("Group", JSON.stringify(group));
     sessionStorage.setItem("Check", 1);
     location.reload();
+
 }
 
 function getInfo(){
     location.reload();
+
 }
+
+
 
 async function getNewIssues(groupID, repoID){
     let issueURL = base + "/repo-groups/" + groupID + "/repos/" + repoID + "/issues-new?period=week";
@@ -225,7 +229,9 @@ function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
+
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrieved from the server*****";
+
          index += 2;
     } 
 
