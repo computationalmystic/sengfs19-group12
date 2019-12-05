@@ -29,6 +29,10 @@ Also, if data is not available, field will disply an error:
     Data column(s) for axis #0 cannot be of type string  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
 
+      		Note:  
+			To properly use site, shield in Navagation bar may need to be deactived.  
+			Please allow "Load Unsafe Scripts".
+
 
 **PREVIOUS**   
 Pull Acceptance Rates:  
