@@ -212,7 +212,7 @@ function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****This data can not be retreived from the server*****";
+         document.getElementById(id_root + index.toString()).innerHTML = "*****This data can not be retrieved from the server*****";
          index += 2;
     } 
 
