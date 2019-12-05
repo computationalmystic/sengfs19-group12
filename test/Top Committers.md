@@ -26,6 +26,10 @@ Designed to be able to view the top committers of selected repostories.
 Issues may arise from one allowing time for either drop down to load.  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
 
+      		Note:  
+			To properly use site, shield in Navagation bar may need to be deactived.  
+			Please allow "Load Unsafe Scripts".
+
 **NEXT**  
 Pull Acceptance Rates:  
 https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Pull%20Acceptance%20Rate.md      
