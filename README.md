@@ -18,8 +18,9 @@ In addition, we were able to successfully set up our site to run off of a Fireba
  **Link to Website**  
  https://group12sprint3.web.app/home
 
-**Instructions To Launch**  
-https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md
+**Instructions To Launch and Use**  
+https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md  
+https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md
 
 **Protocols and Tests for Navigating Project**  
    https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
