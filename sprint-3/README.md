@@ -10,7 +10,7 @@
 
 **Link to Website**
 
-https://cs4320final.firebaseapp.com/repo
+https://group12sprint3.web.app/home
 
 **Intended Design**
 By using Angular Frontend Framework and HTTPClient calls to the Augur interface, we implemented a user-friendly frontend view of the data it contains, including a navigation bar and visuals of multiple metrics within repositories. Users can view the different calculated metrics of committers, pull rates, and repository issues for each chosen repository of the Augur database in line, bar, and pie chart formats.
