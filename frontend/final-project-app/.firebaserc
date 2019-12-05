@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "group12sprint3": {
+      "hosting": {
+        "final-project-app": [
+          "group12sprint3"
+        ]
+      }
+    }
+  }
+}

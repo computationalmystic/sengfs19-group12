@@ -1,0 +1,87 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+}
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+}
+h1 {
+    align-self: center;
+}
+#headBar { 
+    position: inherit;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: gray;
+    float: left;
+    padding: 5px;
+}
+
+select {
+    width: 140px;
+}
+#piechart { 
+    margin-top: 40px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    -webkit-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.btn-secondary {
+    color: #292b2c;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+.jumbotron {
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #eceeef;
+}
+
+.home, .home-paragraph {
+    color: #292b2c;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
