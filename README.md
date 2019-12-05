@@ -83,9 +83,9 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-2
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3  
 
     Code:
-         - APICalls Updated
+	- APICalls Updated  
     Markdowns: 
-         - README.md	  
+	- README.md
          
 -sprint-4  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-4  
