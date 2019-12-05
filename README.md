@@ -4,7 +4,7 @@
  - Weiyu Feng
  - Sarah McLaughlin
  - Christina Roberts
- - Ziang Xu1. 
+ - Ziang Xu 
  
  **Learn More About Augur**  
  https://oss-augur.readthedocs.io/en/master/getting-started/getting-started-toc.html
