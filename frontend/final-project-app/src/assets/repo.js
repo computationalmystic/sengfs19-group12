@@ -1,5 +1,8 @@
 const base = "http://augur.osshealth.io:5000/api/unstable";
 var index = 1;
+let repoX;
+let groupX;
+let check = sessionStorage.getItem("Check");
 let groups;
 let repos;
 let shortList = new Array();
@@ -30,6 +33,16 @@ async function groupList(){
         option.innerHTML = group.rg_name;
         list.options.add(option);
     }
+        repoX = JSON.parse(sessionStorage.getItem('Repo'));
+        groupX = JSON.parse(sessionStorage.getItem('Group'));
+
+    if(check == null){
+       
+    }else{
+        getTopCommitters(groupX.repo_group_id, repoX.repo_id);
+        getPullAcceptance(groupX.repo_group_id, repoX.repo_id);
+        getNewIssues(groupX.repo_group_id, repoX.repo_id);
+    }
 }
 
 async function getGroups(){
@@ -58,48 +71,19 @@ async function getRepos(groupIndex){
     return repos;
 }
 
+
+
 function selectRepo(){ 
     let repoIndex = document.getElementById("repoList").selectedIndex;
     let repo = repos[repoIndex];
     let groupIndex = document.getElementById("groupList").selectedIndex - 1;
     let group = groups[groupIndex];
-
-
-    if(document.getElementById("colGraph")){
-        if(document.getElementById("colGraph").innerHTML == ""){
-            
-        }
-        else{
-            document.getElementById("colGraph").innerHTML = "";
-            getNewIssues(group.repo_group_id, repo.repo_id);
-        }
-        
-    }
-
-    if(document.getElementById("pullGraph")){
-        if(document.getElementById("pullGraph").innerHTML == ""){
-            
-        }
-        else{
-            document.getElementById("pullGraph").innerHTML = "";
-            getPullAcceptance(group.repo_group_id, repo.repo_id);
-        }
-        
-    }
-
-    if(document.getElementById("piechart")){
-        if(document.getElementById("piechart").innerHTML == ""){
-            
-        }
-        else{
-            document.getElementById("piechart").innerHTML = "";
-            getTopCommitters(group.repo_group_id, repo.repo_id);
-        }
-        
-    }
-  
+    sessionStorage.setItem("Repo", JSON.stringify(repo));
+    sessionStorage.setItem("Group", JSON.stringify(group));
+    sessionStorage.setItem("Check", 1);
+    location.reload();
     
-    
+
 }
 
 
@@ -147,7 +131,6 @@ function drawNewIssueChart(){
     var chart = new google.visualization.ColumnChart(document.getElementById('colGraph'));
     chart.draw(data, options);
         removeGoogleErrors();
-        
 }
 
 async function getPullAcceptance(groupID, repoID){
@@ -178,13 +161,7 @@ function drawAcceptanceChart(){
     for(let item of acceptList){ 
         var dataItem = new Array();
         dataItem.push(item.date, item.rate);
-
-        if (dataElements[1]){
-            dataElements.shift(dataItem);
-        }
-        else {
         dataElements.push(dataItem);
-        }
     }
     var data = google.visualization.arrayToDataTable(dataElements);
 
@@ -212,9 +189,7 @@ async function getTopCommitters(groupID, repoID){
         }
         callDrawTopChart();
     } catch(e) {
-        if(document.getElementById("piechart")){
-            document.getElementById("piechart").innerHTML = "*****The selected repo is not accepting that request*****";
-        }
+        document.getElementById("piechart").innerHTML = "*****The selected repo is not accepting that request*****";
     }
 }
 
@@ -250,7 +225,7 @@ function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****This data can not be retrieved from the server*****";
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
          index += 2;
     } 
 
