@@ -31,7 +31,7 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 -frontend  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend  
 
-    Code:   final-project-app/src/app 
+    Code:   final-project-app/src/app  
       - nav-bar component
         - with Angular Routing
       - assets folder
@@ -60,22 +60,22 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-1  
 
     Markdowns:  
-     - AugurTables.png  
-     - SprintOne.md
+	- AugurTables.png  
+	- SprintOne.md
 
 -sprint-2  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-2  
 
     Code:
-         - APICalls	
-         - FinalProject	
-         - Sprint2.css	
-         - Sprint2.html	
-         - Sprint2.js	
-         - package-lock.json
+	- APICalls	
+	- FinalProject	
+	- Sprint2.css	
+	- Sprint2.html	
+	- Sprint2.js	
+	- package-lock.json
     Markdowns: 
-         - README.md	
-         - Link To Website	
+	- README.md	
+	- Link To Website	
          
 -sprint-3  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3  
@@ -89,23 +89,19 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3
 https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-4  
 
     Markdowns:  
-       - README.md 
+	- README.md 
 
 -test  
 https://github.com/computationalmystic/sengfs19-group12/tree/master/test      		  
 
     Markdowns:  
-       - Home Page.md  
-       - Learn More About Augur.md  
-       - Open Project.md  
-       - Pull Acceptance Rate.md	 
-       - README.md	 
-       - Repository Issues.md	 
-       - Top Committers.md 
-
-
-
-				
+	- Home Page.md  
+	- Learn More About Augur.md  
+	- Open Project.md  
+	- Pull Acceptance Rate.md	 
+	- README.md	 
+	- Repository Issues.md	 
+	- Top Committers.md 		
 
 
    
