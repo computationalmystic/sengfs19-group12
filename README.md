@@ -27,7 +27,19 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 **Ongoing Front End Work/Updates**  
    https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend 
    
-**Folders & Code Modified/Created By Group 12**
+**Folders & Code Modified/Created By Group 12**  
+-frontend  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend  
+-sprint-1  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-1  
+-sprint-2  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-2  
+-sprint-3  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-3  
+-sprint-4  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/sprint-4  
+-test  
+https://github.com/computationalmystic/sengfs19-group12/tree/master/test  
 
 
 
