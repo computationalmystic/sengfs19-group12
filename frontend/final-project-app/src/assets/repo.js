@@ -87,7 +87,6 @@ function selectRepo(){
 
 function getInfo(){
     location.reload();
-
 }
 
 
