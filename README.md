@@ -30,11 +30,13 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 **Folders & Code Modified/Created By Group 12**
 
 
+
+
    
 **About Our Process**  
-In order to make our front-end as user friendly as possible, we decided to implement the application Angular Material UI component. In doing this, it allowed us to not only easily apply the different components that Material offered, but also include a strong sense of a theme and unison across each of the pages with a tabular navigation bar. Ionic also makes it easy for the user to utilise our website on their phones or any other mobile device.  
+In order to make our front-end as user friendly as possible, we decided to implement the application Angular Material UI component. In doing this, it allowed us to not only easily apply the different components that Material offered, but also include a strong sense of a theme and unison across each of the pages with a tabular navigation bar. Angular also makes it easy for the user to utilise our website on their phones or any other mobile device.  
 Originally being a Full Stack Group, we had planned to implement Firebase as both our server and database. Using our HTTPClient calls to the Augur API, we would have been able to store the data retrieved in our Firebase database, and then make calls to our database in order to display the data on our UI.  
-When becoming a Front-End Group, we decided to not implement the Firebase database since it was now unnecessary, and instead focus on displaying real-time data clearly on multiple pages and the overall Ionic application. We used Google Charts to display our HTTPClient calls to the Augur API to best visualize and display Augur’s live data.
+When becoming a Front-End Group, we decided to not implement the Firebase database since it was now unnecessary, and instead focus on displaying real-time data clearly on multiple pages and the overall Angular application. We used Google Charts to display our HTTPClient calls to the Augur API to best visualize and display Augur’s live data.
   
    
 
