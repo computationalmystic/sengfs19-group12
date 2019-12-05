@@ -23,7 +23,8 @@ https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20
 https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md
 
 **Protocols and Tests for Navigating Project**  
-   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
+   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md  
+   Scripts used to test if site is properly working.
 
 **Ongoing Front End Work/Updates**  
    https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend 
