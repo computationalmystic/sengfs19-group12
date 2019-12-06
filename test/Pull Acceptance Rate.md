@@ -11,18 +11,18 @@ Designed to be able to visualize the pulls and pulls accepted over time in repos
     2. Wait a few moments for 1st dropdown to load.
     
     3. Select a repository from the first "Project List" dropdown.  
-      ex  "GraphQL (wg-value)"
+      ex  "Rails"
       
     4. Wait a few moments for 2nd dropdown to load.
     
     5. Select from dropdown.  
-      ex  "graphql-js"
+      ex  "rails"
       
     6. Select  
       "Get Information"  
       
     7. Line Chart should appear in field below.  
-      ex displays: 2019-09-23, 6 points
+![Rails-rails as of Dec 9, 2019](https://raw.githubusercontent.com/computationalmystic/sengfs19-group12/master/test/pull%20accept%20rails%20rails.png)
 
 Issues may arise from one allowing time for either drop down to load.
 Also, if data is not available, field will disply an error:  
