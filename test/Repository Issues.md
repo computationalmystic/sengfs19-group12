@@ -11,18 +11,20 @@ Designed to illustrate number of issues in repositories.
     2. Wait a few moments for 1st dropdown to load.
     
     3. Select a repository from the first "Project List" dropdown.  
-      ex  "Comcast (wg-value)"
+      ex  "Rails (wg-value)"
       
     4. Wait a few moments for 2nd dropdown to load.
     
     5. Select from dropdown.  
-      ex  "Freeflow"
+      ex  "rails"
       
     6. Select  
       "Get Information"  
       
     7. Bar Graph should appear in field below.  
-      ex displays: Barchart with several dates showing multiple issues on most dates
+    Also, if mouse is hovered along graph, a bubble appears making data easily readable.  
+    ex: Rails-rails had 35 issues on 2013-03-04  
+![Rails-rails as of Dec 9,2019](https://raw.githubusercontent.com/computationalmystic/sengfs19-group12/master/test/Issues%20rail%20rails.png)
 
 Issues may arise from one allowing time for either drop down to load.
 Also, if data is not available, field will disply an error:  
