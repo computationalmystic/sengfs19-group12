@@ -10,18 +10,19 @@ Designed to be able to view the top committers of selected repostories.
     2. Wait a few moments for 1st dropdown to load.
     
     3. Select a repository from the first "Project List" dropdown.  
-      ex  "CHAOSS RISK WORKING"
+      ex  "Zephyr-RTOS"
       
     4. Wait a few moments for 2nd dropdown to load.
     
     5. Select from dropdown.  
-      ex  "openssl"
+      ex  "zephyr"
       
     6. Select  
       "Get Information"  
       
     7. Pie Chart should appear in field below.  
-      ex displays: levitt@openssl.org-29.2% ; matt@openssl.org-16.7% ; other contributers-54%"
+    
+![Z top com as of Dec 3,2019](https://raw.githubusercontent.com/computationalmystic/sengfs19-group12/master/test/Screen%20Shot%202019-12-06%20at%203.02.44%20PM.png)
 
 Issues may arise from one allowing time for either drop down to load.  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
