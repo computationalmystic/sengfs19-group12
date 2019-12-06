@@ -20,7 +20,13 @@ In addition, we were able to successfully set up our site to run off of a Fireba
 
 **Instructions To Launch and Use**  
 https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md  
-https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md
+https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md  
+
+    Note:
+    Please use following repositories for examples:
+	- Top Commiters:	 Zephyr-RTOS 	 zephyr  
+	- Pull acceptance rates: Rails(wg-value) rails  
+	- Repository Issues:	 Rails(wg-value) rails    
 
 **Protocols and Tests for Navigating Project**  
    https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md  
@@ -105,7 +111,12 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/test
 	- Pull Acceptance Rate.md	 
 	- README.md	 
 	- Repository Issues.md	 
-	- Top Committers.md 		
+	- Top Committers.md 	
+    Images:  
+	- commiters zeph zeph.png  
+	- pull accept rails rails.png  
+	- Issues rail rails.png  
+
 
 
    
