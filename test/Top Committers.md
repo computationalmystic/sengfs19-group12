@@ -22,7 +22,7 @@ Designed to be able to view the top committers of selected repostories.
       
     7. Pie Chart should appear in field below.  
     
-![Z top com as of Dec 3,2019](https://raw.githubusercontent.com/computationalmystic/sengfs19-group12/master/test/Screen%20Shot%202019-12-06%20at%203.02.44%20PM.png)
+![Z top com as of Dec 3,2019](https://raw.githubusercontent.com/computationalmystic/sengfs19-group12/master/test/commiters%20zeph%20zeph.png)
 
 Issues may arise from one allowing time for either drop down to load.  
 Graphs are from data collected at time of calls & example figures won't neccessarily stay accurate over time. 
