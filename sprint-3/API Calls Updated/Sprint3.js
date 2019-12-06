@@ -39,6 +39,12 @@ async function groupList(){
     if(check == null){
        
     }else{
+        document.getElementById("groupName1").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        document.getElementById("repoName1").innerHTML = "Repo Name: " + repoX.repo_name;
+        document.getElementById("groupName2").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        document.getElementById("repoName2").innerHTML = "Repo Name: " + repoX.repo_name;
+        document.getElementById("groupName3").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        document.getElementById("repoName3").innerHTML = "Repo Name: " + repoX.repo_name;
         getTopCommitters(groupX.repo_group_id, repoX.repo_id);
         getPullAcceptance(groupX.repo_group_id, repoX.repo_id);
         getNewIssues(groupX.repo_group_id, repoX.repo_id);
