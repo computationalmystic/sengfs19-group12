@@ -18,11 +18,19 @@ In addition, we were able to successfully set up our site to run off of a Fireba
  **Link to Website**  
  https://group12sprint3.web.app/home
 
-**Instructions To Launch**  
-https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md
+**Instructions To Launch and Use**  
+https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Open%20Project.md  
+https://github.com/computationalmystic/sengfs19-group12/blob/master/test/Top%20Committers.md  
+
+    Note:
+    Please use following repositories for examples:
+	- Top Commiters:	 Zephyr-RTOS 	 zephyr  
+	- Pull acceptance rates: Rails(wg-value) rails  
+	- Repository Issues:	 Rails(wg-value) rails    
 
 **Protocols and Tests for Navigating Project**  
-   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md
+   https://github.com/computationalmystic/sengfs19-group12/blob/master/test/README.md  
+   Scripts used to test if site is properly working.
 
 **Ongoing Front End Work/Updates**  
    https://github.com/computationalmystic/sengfs19-group12/tree/master/frontend 
@@ -103,12 +111,17 @@ https://github.com/computationalmystic/sengfs19-group12/tree/master/test
 	- Pull Acceptance Rate.md	 
 	- README.md	 
 	- Repository Issues.md	 
-	- Top Committers.md 		
+	- Top Committers.md 	
+    Images:  
+	- commiters zeph zeph.png  
+	- pull accept rails rails.png  
+	- Issues rail rails.png  
+
 
 
    
 **About Our Process**  
-In order to make our front-end as user friendly as possible, we decided to implement the application Angular Material UI component. In doing this, it allowed us to not only easily apply the different components that Angular offered, but also include a strong sense of a theme and unison across each of the pages with a tabular navigation bar. Angular also makes it easy for the user to utilise our website on their phones or any other mobile device.  
+In order to make our front-end as user friendly as possible, we decided to implement the application Angular Material UI component. In doing this, it allowed us to not only easily apply the different components that Angular offered, but also include a strong sense of a theme and unison across each of the pages with a tabular navigation bar. 
 Originally being a Full Stack Group, we had planned to implement Firebase as both our server and database. Using our HTTPClient calls to the Augur API, we would have been able to store the data retrieved in our Firebase database, and then make calls to our database in order to display the data on our UI.  
 When becoming a Front-End Group, we decided to not implement the Firebase database since it was now unnecessary, and instead focus on displaying real-time data clearly on multiple pages and the overall Angular application. We used Google Charts to display our HTTPClient calls to the Augur API to best visualize and display Augur’s live data.
   

@@ -39,6 +39,12 @@ async function groupList(){
     if(check == null){
        
     }else{
+        if(document.getElementById("groupName1")) document.getElementById("groupName1").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        if(document.getElementById("repoName1")) document.getElementById("repoName1").innerHTML = "Repo Name: " + repoX.repo_name;
+        if(document.getElementById("groupName2")) document.getElementById("groupName2").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        if(document.getElementById("repoName2")) document.getElementById("repoName2").innerHTML = "Repo Name: " + repoX.repo_name;
+        if(document.getElementById("groupName3")) document.getElementById("groupName3").innerHTML = "Repo Group Name: " + groupX.rg_name;
+        if(document.getElementById("repoName3")) document.getElementById("repoName3").innerHTML = "Repo Name: " + repoX.repo_name;
         getTopCommitters(groupX.repo_group_id, repoX.repo_id);
         getPullAcceptance(groupX.repo_group_id, repoX.repo_id);
         getNewIssues(groupX.repo_group_id, repoX.repo_id);
@@ -225,8 +231,13 @@ function removeGoogleErrors() {
     var id_root = "google-visualization-errors-all-";
     
     while (document.getElementById(id_root + index.toString()) != null) {
-         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrieved from the server*****";
+         document.getElementById(id_root + index.toString()).innerHTML = "*****The data can not be retrived form the server*****";
          index += 2;
     } 
 
+}
+
+
+function getInfo(){
+    location.reload();
 }
